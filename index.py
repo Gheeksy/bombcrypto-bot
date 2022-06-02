@@ -316,16 +316,19 @@ def goToGame():
     # time.sleep(3)
     clickBtn(images['x'])
 
-    clickBtn(images['treasure-hunt-icon'])
+    clickBtn(images['amazon-icon'])
+    # clickBtn(images['treasure-hunt-icon'])
 
 def refreshHeroesPositions():
 
     logger('🔃 Refreshing Heroes Positions')
     clickBtn(images['go-back-arrow'])
-    clickBtn(images['treasure-hunt-icon'])
+    clickBtn(images['amazon-icon'])
+    # clickBtn(images['treasure-hunt-icon'])
 
     # time.sleep(3)
-    clickBtn(images['treasure-hunt-icon'])
+    clickBtn(images['amazon-icon'])
+    # clickBtn(images['treasure-hunt-icon'])
 
 def login():
     global login_attempts
@@ -343,32 +346,11 @@ def login():
         #TODO mto ele da erro e poco o botao n abre
         # time.sleep(10)
 
-    if clickBtn(images['select-wallet-2'], timeout=8):
-        # sometimes the sign popup appears imediately
-        login_attempts = login_attempts + 1
-        # print('sign button clicked')
-        # print('{} login attempt'.format(login_attempts))
-        if clickBtn(images['treasure-hunt-icon'], timeout = 15):
-            # print('sucessfully login, treasure hunt btn clicked')
-            login_attempts = 0
-        return
-        # click ok button
-
-    if clickBtn(images['select-wallet-1-hover'], threshold = ct['select_wallet_buttons'] ):
+    if clickBtn(images['login'], threshold = ct['select_wallet_buttons'] ):
         pass
         # o ideal era que ele alternasse entre checar cada um dos 2 por um tempo 
         # print('sleep in case there is no metamask text removed')
         # time.sleep(20)
-
-    if clickBtn(images['select-wallet-2'], timeout = 20):
-        login_attempts = login_attempts + 1
-        # print('sign button clicked')
-        # print('{} login attempt'.format(login_attempts))
-        # time.sleep(25)
-        if clickBtn(images['treasure-hunt-icon'], timeout=25):
-            # print('sucessfully login, treasure hunt btn clicked')
-            login_attempts = 0
-        # time.sleep(15)
 
     if clickBtn(images['ok'], timeout=5):
         pass
