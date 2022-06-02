@@ -77,7 +77,7 @@ threshold:
   #
   # [pt_BR]
   # Valor padrão: 0.9
-  go_to_work_btn: 0.9
+  go_to_work_btn: 0.85
 
   # [en_US]
   # Default value: 0.9
